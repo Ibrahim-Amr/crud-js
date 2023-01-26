@@ -1,52 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Crud Operations</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
 
-  <body>
-    <section class="input w-50 m-auto py-5">
-      <div>
-        <label for="productName">Product Name</label>
-        <input type="text" id="productName" class="form-control" autocomplete="on" />
-        <p class="text-danger d-none" id="invalidName">
-          Invalied Name
-          <span class="fw-bold">Name must at least have 1 letter</span>
-        </p>
+	<body>
+		<section class="input w-75 m-auto py-5">
+			<div>
+				<label for="productName">Product Name</label>
+				<input
+					type="text"
+					id="productName"
+					class="form-control"
+					autocomplete="on" />
+				<p class="text-danger d-none" id="invalidName">
+					Invalied Name
+					<span class="fw-bold">Name must at least have 1 letter</span>
+				</p>
 
-        <label for="productPrice">Product Price</label>
-        <input type="number" id="productPrice" class="form-control mb-3" />
+				<label for="productPrice">Product Price</label>
+				<input type="number" id="productPrice" class="form-control mb-3" />
 
-        <label for="productCategory">Product Category</label>
-        <input type="text" id="productCategory" class="form-control mb-3" />
+				<label for="productCategory">Product Category</label>
+				<input type="text" id="productCategory" class="form-control mb-3" />
 
-        <label for="productDesc">Product Desc</label>
-        <input type="text" id="productDesc" class="form-control mb-3" />
+				<label for="productDesc">Product Desc</label>
+				<input type="text" id="productDesc" class="form-control mb-3" />
 
-        <button class="btn btn-outline-success mb-3" onclick="pushProduct()" id="mainBTN">Add Product</button>
-      </div>
-      <h2>Search</h2>
-      <input type="text" id="searchField" class="form-control mb-5" oninput="searchProduct(this.value)" />
+				<button
+					class="btn btn-outline-success mb-3"
+					onclick="pushProduct()"
+					id="mainBTN"
+					>Add Product</button
+				>
+			</div>
+			<h2>Search</h2>
+			<input
+				type="text"
+				id="searchField"
+				class="form-control mb-5"
+				oninput="searchProduct(this.value)" />
 
-      <table class="table text-center">
-        <thead>
-          <th>Index</th>
-          <th>Product Name</th>
-          <th>Product Price</th>
-          <th>Product Category</th>
-          <th>Product Desc</th>
-          <th>Update</th>
-          <th>Delete</th>
-        </thead>
-        <tbody id="tableBody"></tbody>
-      </table>
-    </section>
-    <!-- JAVA SCRIPT -->
-    <script src="js/index.js"></script>
-  </body>
+			<div class="table-container">
+				<table class="table text-center">
+					<thead>
+						<th>Index</th>
+						<th>Product Name</th>
+						<th>Product Price</th>
+						<th>Product Category</th>
+						<th>Product Desc</th>
+						<th>Update</th>
+						<th>Delete</th>
+					</thead>
+					<tbody id="tableBody"></tbody>
+				</table>
+			</div>
+		</section>
+		<!-- JAVA SCRIPT -->
+		<script src="js/index.js"></script>
+	</body>
 </html>
