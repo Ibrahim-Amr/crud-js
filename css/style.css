@@ -1,0 +1,10 @@
+body {
+	overflow: hidden;
+}
+
+.table-container {
+	overflow-x: auto;
+}
+.table {
+	min-width: 500px;
+}
